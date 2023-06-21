@@ -11,17 +11,17 @@ class Azctx < Formula
   depends_on "azure-cli"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/whiteducksoftware/azctx/releases/download/2023.06.1/azctx_darwin_amd64.zip"
-      sha256 "122d3c722daab09fa65888bb858aa7909b0786d58f507c09db4bf234bc81d0c8"
+    if Hardware::CPU.arm?
+      url "https://github.com/whiteducksoftware/azctx/releases/download/2023.06.1/azctx_darwin_arm64.zip"
+      sha256 "51ccd9c3c7979474a7a37b3db2f3b3a741531cf69d66aaabc4cbdb56d1c41f9b"
 
       def install
         bin.install "azctx"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/whiteducksoftware/azctx/releases/download/2023.06.1/azctx_darwin_arm64.zip"
-      sha256 "25fb312d75c482ccb2b0a0659f7bc71b8930eddb22c8afacaf77e54042068700"
+    if Hardware::CPU.intel?
+      url "https://github.com/whiteducksoftware/azctx/releases/download/2023.06.1/azctx_darwin_amd64.zip"
+      sha256 "b2d8b6a3e910fb2b13cb0a86a6a1011e8ecfe1acb03781c8ae9abf9cce045c96"
 
       def install
         bin.install "azctx"
@@ -32,7 +32,7 @@ class Azctx < Formula
   on_linux do
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
       url "https://github.com/whiteducksoftware/azctx/releases/download/2023.06.1/azctx_linux_armv6.zip"
-      sha256 "9c2e6b0f58bef0c7f9d56e767e8ef0f7ca1dc0042ff0896f271748ae4fd2674a"
+      sha256 "35a5675edd90fc813cff0614a154bf071bce2aaaeed66825e0d7895afb103ae0"
 
       def install
         bin.install "azctx"
@@ -40,7 +40,7 @@ class Azctx < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/whiteducksoftware/azctx/releases/download/2023.06.1/azctx_linux_amd64.zip"
-      sha256 "6b685995c00877c0c44dfded8ea91e2dcc080feae5ce0499bf3201af2674966c"
+      sha256 "48bde1fe24a3be9e25cc3f961145701c8f61a781ce212e7973c7f1ff87c3f2f3"
 
       def install
         bin.install "azctx"
@@ -48,7 +48,7 @@ class Azctx < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/whiteducksoftware/azctx/releases/download/2023.06.1/azctx_linux_arm64.zip"
-      sha256 "7e72c32ccb205375969fc7b6ab5af23a230b4b9385bada6004d7accf49564c69"
+      sha256 "b272be6a712f2ee3ad6e7a1d144264b30f5353180aa47cbb78cb4e7c75aa156f"
 
       def install
         bin.install "azctx"
