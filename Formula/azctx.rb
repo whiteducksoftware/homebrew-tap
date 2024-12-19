@@ -5,23 +5,23 @@
 class Azctx < Formula
   desc "Faster switching between Azure Subscriptions in your Azure CLI"
   homepage "https://github.com/whiteducksoftware/azctx"
-  version "2024.12.1"
+  version "2024.12.2"
   license "MIT"
 
   depends_on "azure-cli"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/whiteducksoftware/azctx/releases/download/2024.12.1/azctx_darwin_amd64.zip"
-      sha256 "d0aab1d25f003534932925346516a8f5bbf37c3554212a55a93e5fb20897fbcf"
+      url "https://github.com/whiteducksoftware/azctx/releases/download/2024.12.2/azctx_Darwin_x86_64.tar.gz"
+      sha256 "33e6bd4bdf5e7afa0e2840cc40d8c0a2376a59596f9da48586a158d0103e8da6"
 
       def install
         bin.install "azctx"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/whiteducksoftware/azctx/releases/download/2024.12.1/azctx_darwin_arm64.zip"
-      sha256 "111e39a3f3aae2b6dbf7c78b86e4f04d1dd01f17bab0558f3bd687c76d1648ad"
+      url "https://github.com/whiteducksoftware/azctx/releases/download/2024.12.2/azctx_Darwin_arm64.tar.gz"
+      sha256 "55e3f4c154318d472c34a5dce68d14e2999e7111fdce831a61a07332e0b4f5a9"
 
       def install
         bin.install "azctx"
@@ -32,8 +32,8 @@ class Azctx < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/whiteducksoftware/azctx/releases/download/2024.12.1/azctx_linux_amd64.zip"
-        sha256 "12de130a81be5b8f591a8e4879058edc8b75179d1d395b1392bcf59691a626ce"
+        url "https://github.com/whiteducksoftware/azctx/releases/download/2024.12.2/azctx_Linux_x86_64.tar.gz"
+        sha256 "e48dc107c149abc4929c851419d77f9cd344d837714f4a0bea60462c8eb8cb15"
 
         def install
           bin.install "azctx"
@@ -42,8 +42,8 @@ class Azctx < Formula
     end
     if Hardware::CPU.arm?
       if !Hardware::CPU.is_64_bit?
-        url "https://github.com/whiteducksoftware/azctx/releases/download/2024.12.1/azctx_linux_armv6.zip"
-        sha256 "6b8c36367fc0c0ccd93557e03d6f038659c52e2964ad49c307a4884e49e93d79"
+        url "https://github.com/whiteducksoftware/azctx/releases/download/2024.12.2/azctx_Linux_armv6.tar.gz"
+        sha256 "e743de601b5186ca53601f2dab6797ef6e80988044973cdf4d6c0735b0dcfcd1"
 
         def install
           bin.install "azctx"
@@ -52,8 +52,8 @@ class Azctx < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/whiteducksoftware/azctx/releases/download/2024.12.1/azctx_linux_arm64.zip"
-        sha256 "a5dc596303690bdd0d34db097e7c9de54ab71cbdeec5926938fdd8a8407d7681"
+        url "https://github.com/whiteducksoftware/azctx/releases/download/2024.12.2/azctx_Linux_arm64.tar.gz"
+        sha256 "deeb4effbe1f72cbd632f58f17f194631f956fa5f3b37b2ffb041aa9de5d1b9b"
 
         def install
           bin.install "azctx"
