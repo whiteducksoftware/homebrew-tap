@@ -7,20 +7,20 @@ class Lichado < Formula
   # Define all platform-specific URLs and SHA256 checksums
   if Hardware::CPU.intel?
     url "https://github.com/whiteducksoftware/azure-devops-license-checker/releases/download/v1.0.0/lichado-osx-x64.tar.gz"
-    sha256 "373827a93e767b0eccecaa3f5087164d9bbd6d00dc258b6c268c4424e4fbdab4"
+    sha256 "0f5554e0394bae0c170860fc27344b332a37a1eca269598b03942b9ca0ea0424"
   elsif Hardware::CPU.arm?
     url "https://github.com/whiteducksoftware/azure-devops-license-checker/releases/download/v1.0.0/lichado-osx-arm64.tar.gz"
-    sha256 "4360bad1fdc05cf482be2c6e9fcbde1c1357798540d4dd4bdf92c1b6cc2c3162"
+    sha256 "3f63a5f14ef64e34ebd41c3456776b30954c6ad0933bed86bb45e5dfc03254b4"
   end
 
   # Linux (assuming x64)
   if OS.linux?
     if Hardware::CPU.intel?
       url "https://github.com/whiteducksoftware/azure-devops-license-checker/releases/download/v1.0.0/lichado-linux-x64.tar.gz"
-      sha256 "b917ae85469fd133435ed3950c697b1c043a767902bb33a0c5b4ee72ab07a991"
+      sha256 "75ea202d8e59ec2938608a0f9112f623c6bc1dbbf68106cdf6d398df1ed9e6d5"
     elsif Hardware::CPU.arm?
       url "https://github.com/whiteducksoftware/azure-devops-license-checker/releases/download/v1.0.0/lichado-linux-arm64.tar.gz"
-      sha256 "e80d533d41bb3a8b00379050a072b7c96f2fb4c6cb0fd394e075044885723ef6"
+      sha256 "fcb49f16ecab4918f8a16f35af55adfa66d9a90d90ef5e9c06ca64f6c6d1c2bf"
     end
   end
 
