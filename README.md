@@ -14,13 +14,22 @@ Homebrew's `azure-cli` cask and installs Azure CLI if it is missing.
 
 ### Upgrading from the azctx formula
 
-azctx 2026.11 replaces the formula with a cask. After `brew update`, Homebrew
-migrates an installed formula to the cask. If the migration target is not
-trusted yet, Homebrew prints the commands to finish it. To migrate by hand:
+azctx 2026.11 replaces the formula with a cask. Remove the formula first, then
+install the cask:
 
 ```sh
 brew uninstall --formula azctx
 brew install --cask whiteducksoftware/tap/azctx
+```
+
+`brew update` reports the migration. If the cask is not trusted yet, it suggests
+`brew trust` and `brew install --cask` only. Run in that order with the formula
+still installed, the cask cannot link `azctx` and `azctx version` keeps showing
+2024.12.5. To fix that:
+
+```sh
+brew uninstall --formula azctx
+brew reinstall --cask whiteducksoftware/tap/azctx
 ```
 
 Homebrew on Linux is no longer supported for azctx. Use the
